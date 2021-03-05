@@ -1,0 +1,58 @@
+---
+title: Race and Inarceration rate
+author: Rona Guo
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# library(knitr)
+#library(tidyverse)
+#library(ggplot2)
+#library(maps)
+#library(kableExtra)
+
+# Source the data
+source("analysis.R")
+```
+
+The evidence of institutional racism and incarceration is painfully obviously 
+when we look at the incarceration rates among different races in the United 
+States. It was and still is a problem that POC, especially Black people, face today. 
+
+I decided to focus on the incarceration rate. By comparing the rates, which is 
+the percent of people in jail or prison out of the total population age 15
+to 64 of that race, as this age group is the most likely to be incarcerated,
+for overall population, Black, White, Latinx, and Native people.
+
+
+# Summary information for WA
+Here is a comparison of incarceration rate in Washington State.
+```{r, echo = F, message=FALSE}
+knitr::kable(incarceration_table, format = "html", table.attr = "style='width:80%;'")
+
+```
+
+
+# Time trend plot
+Here is a comparison of average incarceration rate across the nation from 2000 to 2018.
+```{r, echo = F}
+time_trned_plot
+
+```
+
+
+# Variable comparison chart
+This is the plot for 10 states with the highest black incarceration rate. Each 
+color represents a different race.
+```{r, echo = F}
+state_plot
+
+```
+
+# Incarceration ratio map of US
+This is the ratio of Black incarceration rate compare to overall.
+```{r, echo = F}
+disparity_map
+```
